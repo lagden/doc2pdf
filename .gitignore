@@ -22,4 +22,4 @@ _init
 vite.config.js.timestamp-*
 
 # Keep
-!coverage/lcov.info
+# !coverage/lcov.info
