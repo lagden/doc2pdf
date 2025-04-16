@@ -1,0 +1,44 @@
+name: Node.js CI
+
+on:
+  - push
+  - pull_request
+
+env:
+  DENO_INSTALL: /usr/local
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Instalar LibreOffice
+        run: sudo apt-get update && sudo apt-get install -y libreoffice
+
+      - name: Install Deno
+        run: curl -fsSL https://deno.land/install.sh | sh
+
+      - name: Install pnpm
+        run: npm i -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run test
+        run: npm test
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
