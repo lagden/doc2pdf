@@ -1,6 +1,7 @@
 # Helper
 test/helper/*.pdf
-test/helper/ccb.docx
+test/helper/ccb*.docx
+test/ccb.spec.js
 
 # Dir
 .vite

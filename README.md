@@ -11,8 +11,9 @@
 
 ---
 
-**doc2pdf** is a library that converts `docx` documents into `pdf`. It uses the `docxtemplater` library and allows for the creation of document templates that
-can be generated with customized data. It depends on the `LibreOffice executable` being installed.
+**doc2pdf** is a library that converts `docx` documents into `pdf`.\
+It uses the [docxtemplater](https://docxtemplater.com/docs/tag-types/) library and allows for the creation of document templates that can be generated with
+customized data. It depends on the `LibreOffice executable` being installed.
 
 ## Install
 

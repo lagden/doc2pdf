@@ -1,6 +1,6 @@
 {
 	"name": "@tadashi/doc2pdf",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "doc2pdf is a library that converts docx documents into pdf.",
 	"keywords": [
 		"lib",
@@ -41,10 +41,14 @@
 	},
 	"dependencies": {
 		"docxtemplater": "3.61.1",
+		"libreoffice-convert": "1.6.1",
 		"pizzip": "3.1.8"
 	},
 	"devDependencies": {
-		"@types/node": "22.14.1",
+		"@types/node": "22.15.3",
+		"@tadashi/currency": "3.4.0",
+		"@tadashi/mask": "4.2.0",
+		"angular-expressions": "1.4.3",
 		"c8": "10.1.3",
 		"npm-run-all": "4.1.5",
 		"rimraf": "6.0.1",
