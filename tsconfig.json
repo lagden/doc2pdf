@@ -1,8 +1,8 @@
 {
 	"compilerOptions": {
-		"moduleResolution": "NodeNext",
-		"module": "NodeNext",
-		"target": "ES2023",
+		"moduleResolution": "node",
+		"module": "CommonJS",
+		"target": "ES2024",
 		"declaration": true,
 		"emitDeclarationOnly": true,
 		"allowJs": true,

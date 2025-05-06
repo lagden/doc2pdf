@@ -6,7 +6,7 @@ test/ccb.spec.js
 # Dir
 .vite
 coverage/**
-dist
+# dist
 logs
 node_modules
 resource
