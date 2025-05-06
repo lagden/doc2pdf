@@ -1,6 +1,6 @@
 {
 	"name": "@tadashi/doc2pdf",
-	"version": "1.1.2",
+	"version": "1.1.3",
 	"description": "doc2pdf is a library that converts docx documents into pdf.",
 	"keywords": [
 		"lib",
@@ -23,14 +23,13 @@
 		"LICENSE",
 		"README.md"
 	],
+	"main": "dist/doc2pdf.cjs",
+	"types": "types/doc2pdf.d.ts",
 	"exports": {
 		".": {
-			"node": {
-				"types": "./types/doc2pdf.d.ts",
-				"import": "./src/doc2pdf.js",
-				"require": "./dist/doc2pdf.cjs"
-			},
-			"default": "./dist/doc2pdf.cjs"
+			"types": "./types/doc2pdf.d.ts",
+			"import": "./src/doc2pdf.js",
+			"require": "./dist/doc2pdf.cjs"
 		}
 	},
 	"scripts": {
@@ -40,7 +39,7 @@
 		"check": "deno fmt --check",
 		"format": "deno fmt",
 		"rm": "rimraf test/helper/*.pdf",
-		"pretest": "run-s check lint tsc rollup rm",
+		"pretest": "run-s check lint rollup tsc rm",
 		"test": "c8 --reporter=text-summary --reporter=lcovonly --reporter=cobertura node --test test/*.spec.js"
 	},
 	"dependencies": {
