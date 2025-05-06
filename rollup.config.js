@@ -4,7 +4,7 @@ export default [
 	{
 		input: './src/doc2pdf.js',
 		output: {
-			dir: 'dist/doc2pdf.js',
+			file: 'dist/doc2pdf.cjs',
 			format: 'cjs',
 			strict: false,
 			sourcemap: false,

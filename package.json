@@ -1,6 +1,6 @@
 {
 	"name": "@tadashi/doc2pdf",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "doc2pdf is a library that converts docx documents into pdf.",
 	"keywords": [
 		"lib",
@@ -25,9 +25,12 @@
 	],
 	"exports": {
 		".": {
-			"types": "./types/doc2pdf.d.ts",
-			"import": "./src/doc2pdf.js",
-			"require": "./dist/doc2pdf.js"
+			"node": {
+				"types": "./types/doc2pdf.d.ts",
+				"import": "./src/doc2pdf.js",
+				"require": "./dist/doc2pdf.cjs"
+			},
+			"default": "./dist/doc2pdf.cjs"
 		}
 	},
 	"scripts": {
