@@ -16,7 +16,7 @@ test('basic', async () => {
 	}
 
 	const file = await doc2pdf({ inputFile, outputFile, data })
-	assert.equal(outputFile.pathname, file.pathname, 'Should be equal to outputFile')
+	assert.equal(outputFile.pathname, file instanceof URL ? file.pathname : null, 'Should be equal to outputFile')
 
 	const fileStat = await stat(file)
 	assert.ok(fileStat.isFile(), 'Should be a file')
@@ -57,7 +57,7 @@ test('customize: delimiters and loop', async () => {
 		DXTOptions,
 	})
 
-	assert.equal(outputFile.pathname, file.pathname, 'Should be equal to outputFile')
+	assert.equal(outputFile.pathname, file instanceof URL ? file.pathname : null, 'Should be equal to outputFile')
 
 	const fileStat = await stat(file)
 	assert.ok(fileStat.isFile(), 'Should be a file')
@@ -88,7 +88,7 @@ test('loop and conditions', async () => {
 	}
 
 	const file = await doc2pdf({ inputFile, outputFile, data, DXTOptions })
-	assert.equal(outputFile.pathname, file.pathname, 'Should be equal to outputFile')
+	assert.equal(outputFile.pathname, file instanceof URL ? file.pathname : null, 'Should be equal to outputFile')
 
 	const fileStat = await stat(file)
 	assert.ok(fileStat.isFile(), 'Should be a file')

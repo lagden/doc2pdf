@@ -8,12 +8,12 @@ import PizZip from 'pizzip'
  * Promisified version of the libreoffice-convert function.
  * @param {Buffer} input - The input file buffer.
  * @param {string} format - The desired output format (e.g., '.pdf').
- * @param {Object} [options] - Optional conversion options.
+ * @param {string} [filter] - Optional conversion options.
  * @returns {Promise<Buffer>} A promise that resolves with the converted file buffer.
  */
-function convertAsync(input, format, options) {
+function convertAsync(input, format, filter) {
 	return new Promise((resolve, reject) => {
-		convert(input, format, options, (error, result) => {
+		convert(input, format, filter, (error, result) => {
 			if (error) {
 				return reject(error)
 			}
